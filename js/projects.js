@@ -15,7 +15,7 @@ window.onload = function() {
     $.getJSON(url, function(data) {
         $.each(data, function(key, val) {
             var name = val["name"];
-            var giturl = val["git_url"];
+            var giturl = String.format("<a href=\"{0}\">{0}</a>", val["html_url"]);
             var language = val["language"];
             var pushdate = val["pushed_at"];
             var creationdate = val["created_at"];
@@ -26,7 +26,7 @@ window.onload = function() {
     $.getJSON(url, function(data) {
         $.each(data, function(key, val) {
             var name = val["name"];
-            var giturl = val["git_url"];
+            var giturl = String.format("<a href=\"{0}\">{0}</a>", val["html_url"]);
             var language = val["language"];
             var pushdate = val["pushed_at"];
             var creationdate = val["created_at"];
@@ -37,7 +37,7 @@ window.onload = function() {
     $.getJSON(url, function(data) {
         $.each(data, function(key, val) {
             var name = val["name"];
-            var giturl = val["git_url"];
+            var giturl = String.format("<a href=\"{0}\">{0}</a>", val["html_url"]);
             var language = val["language"];
             var pushdate = val["pushed_at"];
             var creationdate = val["created_at"];
